@@ -1,0 +1,98 @@
+"use client";
+
+import {
+  SiFacebook,
+  SiYoutube,
+  SiWhatsapp,
+  SiInstagram,
+  SiTiktok,
+  SiWechat,
+  SiTelegram,
+  SiSnapchat,
+  SiLinkedin,
+  SiX,
+  SiPinterest,
+  SiReddit,
+  SiDiscord,
+  SiTwitch,
+  SiTumblr,
+  SiViber,
+  SiLine,
+  SiGithub,
+  SiBehance,
+  SiDribbble,
+  SiMedium,
+  SiSpotify,
+  SiSoundcloud,
+  SiFlickr,
+  SiVimeo,
+  SiQuora,
+  SiYelp,
+  SiMeetup,
+  SiThreads,
+  SiMastodon,
+  SiSubstack,
+  SiPatreon,
+  SiLinktree,
+  SiOnlyfans,
+  SiBilibili,
+  SiSinaweibo,
+  SiStackoverflow,
+  SiFigma,
+  SiNotion,
+} from "react-icons/si";
+import { HiLink } from "react-icons/hi2";
+
+type SocialPlatformIconProps = {
+  platformId: string;
+  className?: string;
+};
+
+const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
+  facebook: SiFacebook,
+  youtube: SiYoutube,
+  whatsapp: SiWhatsapp,
+  instagram: SiInstagram,
+  tiktok: SiTiktok,
+  wechat: SiWechat,
+  telegram: SiTelegram,
+  snapchat: SiSnapchat,
+  linkedin: SiLinkedin,
+  x: SiX,
+  pinterest: SiPinterest,
+  reddit: SiReddit,
+  discord: SiDiscord,
+  twitch: SiTwitch,
+  tumblr: SiTumblr,
+  viber: SiViber,
+  line: SiLine,
+  github: SiGithub,
+  behance: SiBehance,
+  dribbble: SiDribbble,
+  medium: SiMedium,
+  spotify: SiSpotify,
+  soundcloud: SiSoundcloud,
+  flickr: SiFlickr,
+  vimeo: SiVimeo,
+  quora: SiQuora,
+  yelp: SiYelp,
+  meetup: SiMeetup,
+  threads: SiThreads,
+  mastodon: SiMastodon,
+  substack: SiSubstack,
+  patreon: SiPatreon,
+  linktree: SiLinktree,
+  onlyfans: SiOnlyfans,
+  bilibili: SiBilibili,
+  weibo: SiSinaweibo,
+  stackoverflow: SiStackoverflow,
+  figma: SiFigma,
+  notion: SiNotion,
+  qq: HiLink,
+  bluesky: HiLink,
+};
+
+export const SocialPlatformIcon = ({ platformId, className }: SocialPlatformIconProps) => {
+  const Icon = ICON_MAP[platformId] ?? HiLink;
+  return <Icon className={className} aria-hidden />;
+};

@@ -1,0 +1,1 @@
+export { SocialPlatformIcon } from "./SocialPlatformIcon";
